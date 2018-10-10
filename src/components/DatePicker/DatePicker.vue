@@ -20,12 +20,12 @@
                     </div>
                     <div class="day-screen">
                         <div>
-                            <span v-for="week in week" :key="week">{{ week }}</span>
+                            <span v-for="week in week">{{ week }}</span>
                         </div>
                         <div @click="selectDay">
-                            <span v-for="day in previousMonth" class="previousMonth" :key="day"> {{ day }} </span>
-                            <span v-for="day in monthDay[month - 1]" v-bind:class="isActive(day)" class="currentMonth" :key="day">{{ day }}</span>
-                            <span v-for="day in nextMonth" class="nextMonth" :key="day">{{ day }}</span>
+                            <span v-for="day in previousMonth" class="previousMonth" > {{ day }} </span>
+                            <span v-for="day in monthDay[month - 1]" v-bind:class="isActive(day)" class="currentMonth" >{{ day }}</span>
+                            <span v-for="day in nextMonth" class="nextMonth" >{{ day }}</span>
                         </div>
                     </div>
                 </div>
